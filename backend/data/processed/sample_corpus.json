@@ -1,0 +1,86 @@
+[
+  {
+    "id": "us-reg-epa-001",
+    "title": "US: Patchwork regulation and emerging extended producer responsibility",
+    "region": "US",
+    "topic": "regulation",
+    "content": "US EV battery recycling policy remains fragmented, with federal hazardous waste rules interacting with state-level programs. Several states are exploring extended producer responsibility (EPR) concepts for batteries, while transport and handling requirements raise compliance costs. Corporate take-back pilots are growing, but permitting timelines and inconsistent definitions of end-of-life batteries slow scaling."
+  },
+  {
+    "id": "us-market-002",
+    "title": "US: Recycling market capacity expands near battery manufacturing hubs",
+    "region": "US",
+    "topic": "market_trends",
+    "content": "New recycling plants are being announced near cell manufacturing corridors to reduce logistics costs and capture production scrap. Market participants prioritize securing feedstock through OEM and gigafactory contracts, with scrap material often more reliable than end-of-life packs. Profitability is sensitive to metal prices and the ability to produce battery-grade precursor materials."
+  },
+  {
+    "id": "us-risk-003",
+    "title": "US: Safety and logistics risks for collection and transport",
+    "region": "US",
+    "topic": "risks",
+    "content": "Collection networks face fire risk from damaged cells and mixed chemistries, driving higher insurance and packaging requirements. Transport rules for lithium batteries increase documentation and training needs, and rural collection points remain sparse. These factors can push recyclers toward centralized intake models that may reduce capture rates."
+  },
+  {
+    "id": "eu-policy-004",
+    "title": "EU: Battery Regulation sets recycling, recovery, and transparency requirements",
+    "region": "EU",
+    "topic": "regulation",
+    "content": "The EU Battery Regulation introduces stronger requirements for collection, recycling efficiency, and material recovery, alongside documentation for supply-chain due diligence. It encourages design for circularity and mandates more standardized reporting on battery composition. Compliance is expected to favor operators with high-quality tracking and the ability to meet recovery targets across multiple chemistries."
+  },
+  {
+    "id": "eu-infra-005",
+    "title": "EU: Mature waste management supports higher collection, but scaling is uneven",
+    "region": "EU",
+    "topic": "infrastructure",
+    "content": "Many EU member states benefit from established waste handling and recycling networks, enabling comparatively higher collection performance. However, scaling battery-specific capacity varies by country and local permitting. Cross-border movement of battery waste can be efficient but requires careful compliance with shipment documentation and classification rules."
+  },
+  {
+    "id": "eu-trends-006",
+    "title": "EU: Market shifts toward closed-loop supply and local precursor production",
+    "region": "EU",
+    "topic": "market_trends",
+    "content": "European OEMs increasingly seek closed-loop agreements to secure nickel, cobalt, lithium, and manganese for new cells. Recyclers are investing in hydrometallurgical processes to produce battery-grade intermediates, but energy costs and chemical inputs affect economics. Strategic partnerships between OEMs, cathode producers, and recyclers are common."
+  },
+  {
+    "id": "cn-policy-007",
+    "title": "China: Strong policy push for traceability and standardized take-back",
+    "region": "China",
+    "topic": "government_policy",
+    "content": "China has emphasized traceability systems and standardized take-back frameworks to reduce informal processing and improve safety. Policy direction favors data reporting and lifecycle management, supporting larger players that can integrate collection, dismantling, and refining. Enforcement variability can still create uneven incentives across provinces."
+  },
+  {
+    "id": "cn-market-008",
+    "title": "China: Large-scale recycling ecosystem tied to domestic battery supply chain",
+    "region": "China",
+    "topic": "market_trends",
+    "content": "China's recycling ecosystem benefits from scale and proximity to major battery and materials manufacturing clusters. Competition can compress margins, driving efficiency improvements and vertical integration into refining. Production scrap remains a key feedstock while end-of-life volumes increase with earlier EV adoption cohorts."
+  },
+  {
+    "id": "cn-risk-009",
+    "title": "China: Price volatility and quality control pressures in recycled materials",
+    "region": "China",
+    "topic": "risks",
+    "content": "Metal price swings affect the value of recovered materials, while strict quality requirements for battery-grade inputs raise processing demands. Informal channels can introduce contamination or poor documentation, increasing downstream risk. Leading firms invest in tighter QA and standardized dismantling to maintain consistency."
+  },
+  {
+    "id": "global-supply-010",
+    "title": "Supply chain: Feedstock access and chemistry mix shape recycling economics",
+    "region": "Global",
+    "topic": "supply_chain",
+    "content": "Across regions, recyclers compete for feedstock through OEM contracts, dealership networks, and partnerships with fleet operators. The chemistry mix (e.g., LFP vs NMC) changes recoverable value and process design, influencing siting decisions. Early-stage growth is often driven by production scrap, with end-of-life packs becoming a larger share over time."
+  },
+  {
+    "id": "global-startups-011",
+    "title": "Startups: Differentiation via process efficiency and materials output quality",
+    "region": "Global",
+    "topic": "startup_activity",
+    "content": "Battery recycling startups commonly differentiate through faster pre-processing, safer discharge and dismantling, or improved leaching and purification. Many focus on producing battery-grade salts or precursors to capture more value than black mass sales. Partnerships with OEMs and cathode makers are critical for qualification and stable demand."
+  },
+  {
+    "id": "global-reg-012",
+    "title": "Regulatory trend: Moving from waste handling toward circular-economy mandates",
+    "region": "Global",
+    "topic": "regulation",
+    "content": "Regulatory approaches are shifting from general waste handling toward circular-economy outcomes such as minimum recycled content, higher recovery targets, and stronger traceability. Regions differ in enforcement and definitions, but the direction generally rewards transparent reporting and high-yield recovery. Companies are preparing by improving material accounting and chain-of-custody processes."
+  }
+]

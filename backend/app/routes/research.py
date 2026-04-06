@@ -19,9 +19,9 @@ token_budget_manager = TokenBudgetManager()
 @router.post("/research")
 async def run_research(payload: ResearchRequest) -> ResearchResponse:
     sub_questions = planner_service.plan(payload.query)
-    retrieved_chunks = retriever_service.retrieve(sub_questions)
+    retrieved_chunks = retriever_service.retrieve(payload.query, sub_questions)
     summary = summarizer_service.summarize(retrieved_chunks)
-    final_answer = answerer_service.answer(payload.query, summary)
+    final_answer = answerer_service.answer(payload.query, summary, retrieved_chunks)
     debug = token_budget_manager.get_debug_snapshot()
 
     return ResearchResponse(
