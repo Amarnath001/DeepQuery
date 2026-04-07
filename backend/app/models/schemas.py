@@ -10,10 +10,15 @@ class ResearchRequest(BaseModel):
 
 
 class TokenBudgetDebug(BaseModel):
-    allocated_tokens: int = 0
-    used_tokens: int = 0
-    remaining_tokens: int = 0
-    notes: str = "Token budget manager placeholder"
+    max_context_tokens: int
+    initial_chunk_count: int
+    final_chunk_count: int
+    initial_estimated_tokens: int
+    final_estimated_tokens: int
+    compressed: bool
+    dropped_chunks: int
+    compression_applied_to: list[str] = Field(default_factory=list)
+    notes: str
 
 
 class RetrievedChunk(BaseModel):

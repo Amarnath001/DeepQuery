@@ -1,4 +1,5 @@
 from collections import defaultdict
+import re
 
 from app.models.schemas import RetrievedChunk
 
@@ -29,3 +30,31 @@ class SummarizerService:
             lines.append(f"- {region} ({topic_str}): {points_str}.")
 
         return "\n".join(lines)
+
+    def compress_chunks(self, chunks: list[RetrievedChunk], target_ratio: float = 0.5) -> list[RetrievedChunk]:
+        compressed: list[RetrievedChunk] = []
+        for c in chunks:
+            compressed_content = self._compress_text(c.content, target_ratio=target_ratio)
+            compressed.append(
+                RetrievedChunk(
+                    id=c.id,
+                    title=c.title,
+                    region=c.region,
+                    topic=c.topic,
+                    content=compressed_content,
+                    score=c.score,
+                )
+            )
+        return compressed
+
+    def _compress_text(self, text: str, target_ratio: float) -> str:
+        sentences = [s.strip() for s in re.split(r"(?<=[.!?])\s+", text.strip()) if s.strip()]
+        if not sentences:
+            return text
+
+        first_sentences = " ".join(sentences[:2])
+        words = first_sentences.split()
+        max_words = max(40, min(60, int(len(text.split()) * max(0.2, min(target_ratio, 1.0)))))
+        if len(words) <= max_words:
+            return first_sentences
+        return " ".join(words[:max_words]).rstrip() + "..."

@@ -4,7 +4,13 @@ from app.models.schemas import RetrievedChunk
 class AnswererService:
     """Produces the final user-facing answer."""
 
-    def answer(self, query: str, summary: str, chunks: list[RetrievedChunk]) -> str:
+    def answer(
+        self,
+        query: str,
+        summary: str,
+        chunks: list[RetrievedChunk],
+        constrained: bool = False,
+    ) -> str:
         regions = sorted({c.region for c in chunks}) if chunks else []
         topics = sorted({c.topic for c in chunks}) if chunks else []
 
@@ -16,9 +22,15 @@ class AnswererService:
             evidence_highlights.append(f"{c.region}/{c.topic}: {c.title}")
 
         highlights_str = "; ".join(evidence_highlights) if evidence_highlights else "No strong evidence highlights."
+        evidence_note = (
+            "Evidence was compressed and/or trimmed to satisfy the context budget. "
+            if constrained
+            else ""
+        )
 
         return (
             f"Query: {query}\n\n"
+            f"{evidence_note}"
             f"Summary (from local corpus):\n{summary}\n\n"
             f"Evidence coverage: regions={region_str}; topics={topic_str}.\n"
             f"Top evidence highlights: {highlights_str}."

@@ -2,15 +2,12 @@ class PlannerService:
     """Creates sub-questions from the user query."""
 
     def plan(self, query: str) -> list[str]:
-        q = query.strip().rstrip("?")
-        if not q:
-            q = "EV battery recycling"
+        topic = query.strip().rstrip("?")
+        if not topic:
+            topic = "EV battery recycling"
 
-        comparison = (
-            f"How do approaches differ across the US, EU, and China for {q} "
-            "(policy, infrastructure, and industry players)?"
-        )
-        policy = f"What regulations and government policies most shape outcomes for {q} in each region?"
-        market = f"What market trends, risks, and supply-chain constraints are emerging for {q} across regions?"
+        comparison = "How do the US, EU, and China differ in policy, infrastructure, and industry approach?"
+        policy = f"Which regulations and government policy signals are most relevant to {topic}?"
+        market = f"What market trends, risks, and supply-chain constraints are shaping {topic}?"
 
         return [comparison, policy, market]
